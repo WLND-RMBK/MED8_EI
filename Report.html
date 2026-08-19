@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embodied Interaction 
+    </title>
+    <meta name="description"
+        content="Project report for the course Embodied Interaction — Medialogy MSc, Aalborg University, Copenhagen." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Mobile Nav Toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+    </button>
+
+    <!-- Overlay for mobile -->
+    <div class="nav-overlay"></div>
+
+    <!-- Side Navigation -->
+    <nav class="nav-panel" aria-label="Report navigation">
+        <div class="nav-brand">Chapters</div>
+        <ul class="nav-list">
+            <li><a href="#paper-notes">Project Description</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#problem-statement">Problem Statement</a></li>
+            <li><a href="#theoretical-foundations">Theoretical Foundations</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#discussion">Discussion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero / Title -->
+        <header class="hero">
+            <div class="hero-inner">
+                <h1>Ghost Voices:<br /> A sound installation based on Laban Efforts 
+</h1>
+                <div class="hero-divider"></div>
+                <div class="hero-meta"> 
+                    <strong>Wieland Rambke</strong>
+                    <span>Aalborg University, Copenhagen, Denmark</span>
+                    <span>Medialogy MSc</span>
+                    <span>Embodied Interaction</span>
+                
+                    
+                </div>
+            </div>
+        </header>
+
+        <!-- Report Body -->
+        <div class="content-body">
+
+            <!-- Paper Notes -->
+            <section id="paper-notes" class="report-section">
+                <div class="section-label">Section I</div>
+                <h2>Project description</a></h2>
+
+                <div class="subsection">
+                    <p>
+                        This project presents a 60-channel sound installation created in Pure Data that explores the application of Laban Movement Analysis (LMA) as a notation system for generative music and spatialization. It uses LMA to create an experience of a Disembodied Interaction, thus inverting the original intent and application of LMA. By recording five seconds of a user’s voice and processing it in real-time, the system creates multiple autonomous "sound bodies" that haunt a 60-channel array. Each entity is defined by a unique combination of the four Laban Effort continuums: Time, Weight, Space, and Flow<sup><a href="#ref1">1</a></sup>. This report examines how these qualitative movement descriptors can be mapped to synthesis parameters to create a sense of disembodiment that highlights the inherently ghost-like nature of recorded sound.
+                    </p>
+                </div>
+
+        
+                    
+            </section>
+
+          
+            <a href="https://github.com/WLND-RMBK/MED8_EI">GitHub Project Repository</a>
+            <!-- Introduction -->
+            <section id="introduction" class="report-section">
+                <div class="section-label">Section II</div>
+                <h2>Introduction</h2>
+                <p>
+                    The human voice is intrinsically tied to the living body. However, the act of recording the human voice creates an immediate and uncanny separation: a "disembodiment." Once recorded, the voice becomes a "ghost-like vestige of the past," occupying a space while the original speaker may have moved on, or ceased to speak <sup><a href="#ref2">2</a></sup>. The sound installation presented here transforms a user’s recorded voice into autonomous entities that move through a 60-channel speaker system.
+                    Drawing on theories of Embodied Interaction, the project utilizes Laban Movement Analysis not as a tool for describing human dance or movement, but as a formal notation system and rule set for the "movement" of sound itself. By mapping the qualitative "inner intent" of Laban’s Effort continuums to sound synthesis and spatialization, the installation creates a physical environment where time is "out of joint": While in the natural world, sound is always in motion, technology allows us to "trap" sound indefinitely, decoupling it from it's original time-dependency. Users entering the speaker array do not just hear a recording; they encounter shards of their own past voice. Their voice has been processed to evoke a ghostly atmosphere, informed by LMA rules. Thus, the installation also amplifies the discomfort often experienced when confronted with recordings of their own voice. Users leave a trace of their voice in the system, and are then free to explore the space where their voice is moving. The speaker array becomes the kinesphere vor the sound entities' movements. The goal of the sound installation is to provide an immersive environment where users can ponder the nature of sound in a "haunted space".<br>
+                    <br>
+                
+                </p>
+            </section>
+
+            <!-- Problem Statement -->
+            <section id="problem-statement" class="report-section">
+                <div class="section-label">Section III</div>
+                <h2>Problem Statement</h2>
+                <p>
+                    The central inquiry of this project is: "How can the Laban Effort System be utilized as a generative notation system for autonomous sound synthesis and spatialization?"
+                    Specifically, this study explores:<br>
+                    How the four LMA Effort continuums (Time, Weight, Space, and Flow) can be translated into computable digital signal processing (DSP) parameters.<br>
+                    How the application of hauntological principles to human voice recordings can facilitate an experience of "disembodiment" for the user.
+
+                </p>
+            </section>
+
+            <!-- Theoretical Foundations -->
+            <section id="theoretical-foundations" class="report-section">
+                <div class="section-label">Section IV</div>
+                <h2>Theoretical Foundations &amp; Related Work</h2>
+                <p>
+                    Laban Movement Analysis (LMA) and Effort<br>
+                    LMA identifies the Effort component as the qualitative aspect of movement, focusing on dynamics, energy, and intent. It is defined by four motion factors, each existing on a continuum between two poles:<br>
+                    <ul>
+                    <li>Time: Sustained (lingering, luxuriating) vs. Sudden (urgent, staccato).</li>
+                    <li>Weight: Light (delicate, buoyant) vs. Strong (powerful, forceful).</li>
+                    <li>Space: Indirect (multi-focused, scanning) vs. Direct (channeled, laser-like).</li>
+                    <li>Flow: Free (fluid, outpouring) vs. Bound (controlled, restrained).</li>
+                    </ul>
+                    <br>
+                    The Spectral Voice<br>
+                    Mark Fisher’s concept of hauntology describes a state where culture is haunted by "lost futures" and the "effective virtuality" of the past, and he expressly uses music to bolster his argument. In this installation, the sound recording acts as a "xenolithic artifact" — an inorganic relic that calls up ancient or recent memories. By processing the voice to sound "ghostly", the work renders time as an "audible materiality"<sup><a href="#ref2">2</a></sup>.<br>
+                    <br>
+                    Larboulette and Gibet provide precise calculations for low-level motion descriptors<sup><a href="#ref3">3</a></sup>. However, the project uses subjective approximations, opting for a high-level approach, acknowledging that "perceptual evaluations might help to find relevant quantifications depending on the application". Thus, the project uses human perception for mapping movement qualities to sound. 
+                    <br>
+
+                </p>
+            </section>
+
+            <!-- Development -->
+            <section id="methodology" class="report-section">
+                <div class="section-label">Section V</div>
+                <h2>Development & Design</h2>
+                <p>
+                    The installation was developed using Pure Data<sup><a href="#ref4">4</a></sup>, leveraging its capability for real-time processing, synthesis, parameter mapping and multi-channel routing. Users record a 5-second sample, and the sound piece starts.<br>
+                    <br>
+
+                    The sound entities and their Laban Efforts<br>
+                    Wavetables: 2 wavetables are continuously written to. A combination of these 2 tables is obtained using linear interpolation, the result is written to a third wavetable. This wavetable is then read out.<br>
+                    Time: Sustained - Weight: Variable - Space: Variable - Flow: Free<br>
+                    <br>
+
+                    Loop Reader: Reads from the source array, with constantly changing start and end points.<br>
+                    Time: Sudden - Weight: Light - Space: Variable - Flow: Bound<br>
+                    <br>
+
+                    EQ: 16-band equalizer. Receives input from Loop Reader. All frequency bands are constantly modulated.<br>
+                    Time: Variable - Weight: Variable - Space: Variable - Flow: Bound<br>
+                    <br>
+
+                    Resynthesis: 60 partial resynthesis of the original recording. However, the signal is only let through intermittently to allow grabbing new values for the oscillators, essentially used to obtain an AM texture. Every partial is distributed to a dedicated speaker.<br>
+                    Time: Variable - Weight: Variable - Space: Direct - Flow: Free<br>
+                    <br>
+
+                    Scatter: Short bits of the recording are sent to a reverb and then to a multi-delay engine.<br>
+                    Time: Sudden - Weight: Variable - Space: Variable - Flow: Bound<br>
+                    <br>
+
+                    Swoop: A frozen reverb tail<br>
+                    Time: Sudden - Weight: Light - Space: Variable - Flow: Bound<br>
+                    <br>
+
+                    Swoop2: A frozen reverb tail, but with AM and delays<br>
+                    Time: Sudden - Weight: Light - Space: Variable - Flow: Bound<br>
+                    <br>
+
+                    Freeze: Frozen Reverb, intermittently freezing a new section of the sound source. Provides the source for the Swoop and Swoop2 entities.<br>
+                    Time: Sustained - Weight: Light - Space: Variable - Flow: Free<br>
+                    <br>
+
+
+                    Mapping Laban Efforts to Sound<br>
+                    Each of the sound entities is a combination of Effort continuums. For example, an entity with Sustained Time, Light Weight, Direct Space, and Free Flow is programmed as follows:<br>
+                    Time (Sustained): Long, overlapping frozen reverb tails.<br>
+                    Weight (Light): Emphasis on high-frequency FFT bins and low amplitude.<br>
+                    Space (Direct): Movement along a single, linear trajectory through the 60-speaker circle.<br>
+                    Flow (Free): Fluid, non-stop movement without rigid "stops" or pauses.<br>
+                    Where noted as Variable, changes occur along the continuum.<br>
+
+                    <figure>
+                        <img src="MAIN.JPG" alt="Nodes" width="1000">
+                        <figcaption>View of the main window of the Pure Data patch. Hitting the big button records sound. The piece starts immediately once recording is finished.</figcaption>
+                    </figure>
+                    
+                    <br>
+
+                </p>
+            </section>
+
+        
+
+            <!-- Discussion -->
+            <section id="discussion" class="report-section">
+                <div class="section-label">Section VI</div>
+                <h2>Discussion</h2>
+                <p>
+                    The project explores how embodied metaphors—mappings between physical concepts and abstract domains—allow users to "make sense" of the sound, and experience their movement as meaningful. Furthermore, it demonstrates that Laban’s Effort system can transcend the description of human movement to become a viable and meaningful rule system for autonomous agents in music. Future projects could apply Larboulette's system more rigorously in order to gain insights into changes in perceived meaningfulness, and how they might be related to the application of low-level mathematical approaches.By treating sound as a "body" with "inner intent," the project creates a bridge between the physical and the virtual. Future iterations could involve tangible interaction where users move physical objects to "sculpt" the ghostly voices, further bridging the gap between embodied experience and disembodied sound.
+
+
+                </p>
+            </section>
+
+            <!-- Disclosure on the use of AI -->
+            <section id="discussion" class="report-section">
+                <div class="section-label">Section VI</div>
+                <h2>Disclosure on the use of AI</h2>
+                <p>
+                
+                AI tools were used for outline structuring, feedback on drafts, and
+                editing suggestions. All writing, analysis, interpretation, and theoretical framing are the author's own.
+
+            </section>
+
+        
+            <h2>References</h2>
+            <ol>
+                 <li id="ref1">
+                    Konie, R. (2011). <i>A Brief Overview Of Laban Movement Analysis</i>.
+                </li>
+                <li id="ref2">
+                    Fisher, M. (2012). <i>What is Hauntology?</i>.
+                </li>
+                <li id="ref3">
+                    Larboulette, C. & Gibet, S. (2015). <i>A review of computable expressive descriptors of human motion</i>
+                <li id="ref4">
+                    <i>Pure Data</i> (Version 0.56.2) [Computer software]. https://puredata.info/
+</li>
+
+</li>
+
+            </ol>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            &copy; 2026 Wieland Rambke
+        </footer>
+
+    </main>
+
+    <script>
+        /* ---- Mobile nav toggle ---- */
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav-panel');
+        const overlay = document.querySelector('.nav-overlay');
+
+        function openNav() { nav.classList.add('open'); overlay.classList.add('visible'); }
+        function closeNav() { nav.classList.remove('open'); overlay.classList.remove('visible'); }
+
+        toggle.addEventListener('click', () => nav.classList.contains('open') ? closeNav() : openNav());
+        overlay.addEventListener('click', closeNav);
+
+        /* ---- Active nav highlight on scroll ---- */
+        const sections = document.querySelectorAll('.report-section');
+        const navLinks = document.querySelectorAll('.nav-list a');
+
+        function highlightNav() {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.getBoundingClientRect().top;
+                if (top <= 120) current = section.id;
+            });
+
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+        }
+
+        window.addEventListener('scroll', highlightNav, { passive: true });
+        highlightNav();
+
+        /* Close mobile nav on link click */
+        navLinks.forEach(link => link.addEventListener('click', closeNav));
+    </script>
+
+</body>
+
+</html>
