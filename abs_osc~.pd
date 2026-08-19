@@ -8,7 +8,7 @@
 #X obj 454 664 *~;
 #X msg 378 290 8;
 #X obj 425 290 unpack;
-#X obj 454 888 outlet~;
+#X obj 454 899 outlet~;
 #X obj 482 361 f2s~ 8;
 #X obj 378 260 t b l;
 #X text 393 189 Route according to flag (-1 discard/0 keep/1 new), f 25;
@@ -18,7 +18,7 @@
 #X obj 342 499 osc~;
 #X obj 810 90 loadbang;
 #X obj 517 633 + 1;
-#X obj 454 835 *~;
+#X obj 454 804 *~;
 #X obj 517 706 osc~;
 #X obj 517 735 +~ 1;
 #X obj 517 764 *~ 0.5;
@@ -36,6 +36,8 @@
 #X msg 810 123 1;
 #X msg 654 551 1000;
 #X msg 710 551 5000;
+#X obj 454 833 *~ 0.05;
+#X obj 454 862 /~ 60;
 #X connect 1 0 2 0;
 #X connect 2 0 33 0;
 #X connect 3 0 4 0;
@@ -56,7 +58,7 @@
 #X connect 17 0 31 0;
 #X connect 17 0 34 0;
 #X connect 18 0 25 0;
-#X connect 19 0 9 0;
+#X connect 19 0 37 0;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 19 1;
@@ -78,3 +80,5 @@
 #X connect 34 0 33 1;
 #X connect 35 0 27 0;
 #X connect 36 0 27 0;
+#X connect 37 0 38 0;
+#X connect 38 0 9 0;
