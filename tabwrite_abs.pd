@@ -1,0 +1,8 @@
+#N canvas 4 26 1920 997 16;
+#X obj 826 392 tabwrite \$2;
+#X obj 826 317 inlet val;
+#X obj 933 317 inlet idx;
+#X text 1068 316 simple abstraction used for fft eq;
+#X text 46 940 Wieland Rambke \, 2026;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
